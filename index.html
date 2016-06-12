@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div>
+    <p id="myp1">
+      <audio id = "myAudio" controls>
+        <source src="" type="audio/mpeg">
+      </audio>
+    </p>
+    <p id="myp2">
+      <button id="play" " type="button">Play</button>
+      <button id="pause" " type="button">Pause</button>
+      <button id="stop" " type="button">Stop</button>
+      <button onclick="nextAudio()" type="button">Next</button>  
+    </p>
+    <p>
+      <button id="load" " type="button" <a href="#" class="activate-modal">Load</a></button>
+    </p>
+  </div>
+  <div div class="modal-wrapper">
+    <div class="modal">
+      <a href="#" class="exit">X</a>
+      <h3>Please enter the path of your music file</h3>
+      <form id="search">
+        <input id="usrinput" type="text" name="t" placeholder="Path...">
+        <button id="loadButton" type="button">Load</button> 
+      </form> 
+    </div>
+  </div><br>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
