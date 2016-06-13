@@ -9,13 +9,22 @@ div{
   margin-top: 100px;
 }
 #myp2{
-	margin-top: 50px;
+	margin-top: 20px;
 }
 
+li{
+  list-style: none;
+  color: blue;
+  margin-right: 25px;
+}
 #myAudio{
-  background:#666;width:400px;padding:20px;
+  background:#666;
+  width:400px;
+  padding:20px;
 }
-
+#playlist{
+  background:#666;
+}
 
 input[type=text] {
     width: 130px;

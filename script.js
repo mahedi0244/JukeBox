@@ -27,15 +27,30 @@ $(document).ready(function(){
 	$( "#stop" ).click(function() {
   		myJuke.stop();
 	});
-	
 	$("#loadButton").click(function(e){
-	    //e.preventDefault();
 	    myJuke.load();
 		//basically the opposite of activate
 	    $(".modal-wrapper").hide();
 	    $("body").removeClass("modal-on");
 	 });
-	
+
+
+	$( "#play1" ).click(function() {
+		playList(0);
+	});
+	$( "#play2" ).click(function() {
+  		playList(1);
+	});
+	$( "#play3" ).click(function() {
+  		playList(2);
+	});
+	$( "#play4" ).click(function() {
+  		playList(3);
+	});
+	$( "#play5" ).click(function() {
+  		playList(4);
+	});
+
 });
 
 function Jukebox(){   
@@ -78,7 +93,12 @@ function random() {
 	return audio;
 } 
 
-
+function playList(x) { 
+   	var audio = document.getElementById("myAudio");
+	audio.src = playlist[x];
+	document.getElementById("myh1").innerHTML = playlist[x];
+	audio.play();
+} 
 
 
 
