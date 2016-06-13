@@ -12,6 +12,11 @@ div{
 	margin-top: 50px;
 }
 
+#myAudio{
+  background:#666;width:400px;padding:20px;
+}
+
+
 input[type=text] {
     width: 130px;
     box-sizing: border-box;
