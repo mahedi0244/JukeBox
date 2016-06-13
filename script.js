@@ -27,12 +27,9 @@ $(document).ready(function(){
 	$( "#stop" ).click(function() {
   		myJuke.stop();
 	});
-	$( "#loadButton" ).click(function() {
-  		myJuke.load();
-	});
-
+	
 	$("#loadButton").click(function(e){
-	    e.preventDefault();
+	    //e.preventDefault();
 	    myJuke.load();
 		//basically the opposite of activate
 	    $(".modal-wrapper").hide();
@@ -57,17 +54,29 @@ function Jukebox(){
 		var path = document.getElementById("usrinput").value;
 		audio = document.getElementById("myAudio");
 		audio.src = path;
+		document.getElementById("myh1").innerHTML = path;
+
 	}
 }
 
 function nextAudio() { 
    	var audio = document.getElementById("myAudio");
 	audio.src = playlist[count];
+	document.getElementById("myh1").innerHTML = playlist[count];
 	count = (count+1)%(playlist.length);
 
 	return audio;
 } 
 
+function random() { 
+
+	var position = Math.floor((Math.random() * playlist.length));
+   	var audio = document.getElementById("myAudio");
+	audio.src = playlist[position];
+	document.getElementById("myh1").innerHTML = playlist[position];
+
+	return audio;
+} 
 
 
 
